@@ -36,7 +36,55 @@ public:
     }
 };
 
-// Solution 2 --Optimum
+
+//Solution 2
+
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+        // O(2*m*n) T.C and O(m + n) S.C without stl solution of (73. Set Matrix Zeroes) Question
+        int m = matrix.size();
+        int n = matrix[0].size();
+
+        
+        vector<int>vc(n, 1), vr(m, 1);
+
+        for(int i=0; i<m; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+                if(matrix[i][j]==0){
+                    
+                         vr[i]=0;
+                         vc[j]=0;
+                    
+                   
+                }
+            }
+        
+        }
+
+        
+
+        for(int i=0; i<m; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+                if(vr[i]==0 || vc[j]==0)
+                {
+                    matrix[i][j]=0;
+                }
+            }
+        
+        }
+
+
+        
+    }
+};
+
+
+// Solution 3 --Optimum
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
