@@ -14,6 +14,7 @@ public:
                     flag=0;
                 }
             }
+            //next_permutation(v.begin(), v.end());// in-built function of C++
 
 
             if(flag)
