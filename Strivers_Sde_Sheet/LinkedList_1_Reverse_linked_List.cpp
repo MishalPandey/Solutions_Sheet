@@ -11,43 +11,37 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
 
-        
-        if(head==nullptr)
-        {
-            return head;
-        }
-        ListNode* prev = NULL;
-        ListNode* curr= head;
-        ListNode* nexxtt= curr->next;
+            if(head == nullptr)
+                return nullptr;
 
-        while(curr!=nullptr)
-        {
-            nexxtt=curr->next;
-           
-            curr->next = prev;
+            ListNode* prev = nullptr;
+            ListNode* curr = head;
+            ListNode* next = head->next;
 
-            prev= curr;
-            curr= nexxtt;
-            if(nexxtt!=nullptr)
+            while(curr!= nullptr)
             {
-                nexxtt= nexxtt->next;
+                    next = curr->next;
+                    curr->next = prev;
+
+                    prev= curr;
+                    curr= next;
+
+                    if(next!= nullptr)
+                    {
+                        next= next->next;
+                    }
 
             }
-            
-            
-        }
-
-        return prev;
+            return prev;
 
         
     }
 };
-
-
 
 
 //Solution 2-- Recursive
