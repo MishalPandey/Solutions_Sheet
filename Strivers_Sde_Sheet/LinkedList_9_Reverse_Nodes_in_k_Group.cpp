@@ -1,4 +1,4 @@
-//Solution 1 --T.C{O(n)}, S.C{O(n)}
+//Solution 1 --T.C{O(n)}, S.C{O(length of LL/k)}
 // By recursion
 
 /**
