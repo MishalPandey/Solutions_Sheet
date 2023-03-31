@@ -60,3 +60,58 @@ public:
         
     }
 };
+
+
+
+
+//Solution2 -->optimum
+
+class Solution {
+public:
+
+    ListNode* reverseKGroup(ListNode* head, int k) {
+
+            int length=0;
+            ListNode* temp = head;
+            while(temp!= nullptr)
+            {
+                length++;
+                temp= temp->next;
+            }
+            length/=k;
+
+                ListNode* prev= nullptr;
+                ListNode* curr= head;
+                ListNode* next= head->next;
+
+                ListNode* before_start= new ListNode(-1);
+                ListNode* start= head;
+                ListNode* ans_head= before_start;
+
+                while(length--)
+                {
+
+                        prev=nullptr;
+
+                        for(int i=0; i<k; i++)
+                        {
+                                next = curr->next;
+                                curr->next = prev;
+
+                                prev= curr;
+                                curr= next;
+
+                        }
+
+                        if(before_start != nullptr) before_start->next = prev;
+                        if(start!= nullptr) start->next = curr;
+                        before_start = start;  
+                        start = curr;
+
+                }
+
+
+            return ans_head->next;
+        
+    }
+};
