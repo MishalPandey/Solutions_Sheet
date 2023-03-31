@@ -64,7 +64,7 @@ public:
 
 
 
-//Solution2 -->optimum
+//Solution2 -->optimum ----->T.C{O(n)}, S.C{O(1)}
 
 class Solution {
 public:
