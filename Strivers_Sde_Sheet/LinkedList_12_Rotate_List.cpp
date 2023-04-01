@@ -1,3 +1,5 @@
+//Solution 1----- T.C{O(n)}, S.C{O(1)}
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
