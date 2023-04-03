@@ -1,4 +1,4 @@
-//Solution 1
+//Solution 1---T.C{O(n)},  S.C({~n})
 
 /*
 // Definition for a Node.
