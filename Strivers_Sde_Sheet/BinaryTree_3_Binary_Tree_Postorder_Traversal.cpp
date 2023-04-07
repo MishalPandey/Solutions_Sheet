@@ -129,7 +129,7 @@ public:
 
               }
               else{
-                   //pre order
+                   //post order
                    ans.push_back(top->root->val);
                    st.pop();
               }
