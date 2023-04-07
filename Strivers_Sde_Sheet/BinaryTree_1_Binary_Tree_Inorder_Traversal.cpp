@@ -108,32 +108,32 @@ public:
 
         while(st.size()>0)
         {
-            Pair* top = st.top();
-            if(top->state == 1)
-            {
-                //pre order
-                top->state++;
-                if(top->root->left != nullptr)
-                {
-                    st.push(new Pair(top->root->left, 1));
-                }
-                
-            }
-            else if(top->state == 2)
-            {
-                //in order
-                top->state++;
-                ans.push_back(top->root->val);
-                if(top->root->right != nullptr)
-                {
-                    st.push(new Pair(top->root->right, 1));
-                }
-                
-            }
-            else{
-                //pre order
-                st.pop();
-            }
+                    Pair* top = st.top();
+                    if(top->state == 1)
+                    {
+                            //pre order
+                            top->state++;
+                            if(top->root->left != nullptr)
+                            {
+                                st.push(new Pair(top->root->left, 1));
+                            }
+
+                    }
+                    else if(top->state == 2)
+                    {
+                            //in order
+                            top->state++;
+                            ans.push_back(top->root->val);
+                            if(top->root->right != nullptr)
+                            {
+                                st.push(new Pair(top->root->right, 1));
+                            }
+
+                    }
+                    else{
+                            //pre order
+                            st.pop();
+                    }
 
         }
 
