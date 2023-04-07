@@ -131,7 +131,7 @@ public:
 
                     }
                     else{
-                            //pre order
+                            //post order
                             st.pop();
                     }
 
