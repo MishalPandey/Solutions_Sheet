@@ -181,7 +181,7 @@ public:
 
                 if(ln != nullptr)
                 {
-                        ln = get_rightmost_node(ln, curr); //righmost node of left child
+                        ln = get_rightmost_node(ln, curr); //rightmost node of left child
                         if(ln->right == nullptr)
                         {
                             //create thread
