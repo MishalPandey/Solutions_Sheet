@@ -142,19 +142,8 @@ public:
 };
 
 
-//Solution 4--(most optimal) --> Concept of travesal with S.C{O(1)}, T.C{O(3*n)}
+//Solution 4--(most optimal) --> (Morris inorder Traversal) S.C{O(1)}, T.C{O(3*n)}
 
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
  
 class Solution {
 public:
