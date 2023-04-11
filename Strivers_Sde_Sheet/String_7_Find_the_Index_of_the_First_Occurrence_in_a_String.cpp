@@ -83,4 +83,5 @@ public:
     }
 };
 
-//By Rabin-Karp algorithm C++ implementation
+//By Rabin-Karp algorithm  String Matching Algorithm
+//By Knuth-Morris-Pratt KMP String Matching Algorithm
