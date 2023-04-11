@@ -1,2 +1,2 @@
 //Knuth-Morris-Pratt KMP String Matching Algorithm
-//for problems like --- Find the Index of the First Occurrence in a String
+//for problems like --- String_7_Find_the_Index_of_the_First_Occurrence_in_a_String.cpp
