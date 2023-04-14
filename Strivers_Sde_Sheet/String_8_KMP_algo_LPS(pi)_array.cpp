@@ -5,6 +5,8 @@
 
 //Solution 1 --T.C{O(n+m)}, S.C{O(n)}
 
+//code when revise strings
+
 
 
 class Solution {
