@@ -42,7 +42,14 @@ public:
                                     //imp Note**********************************************
                                     len = lps[len - 1];
                                     
-                                     //len= 0; wrong becz { heystack= "aabaaabaaac" , needle ="aabaaac" }
+                                     //len= 0; wrong becz {needle ="aabaaac" } 
+                                                                    0101210----wrong
+                                                                    0101220-----right
+                                       //simillarly for 
+                                                        // {needle = "AAACAAAA" } 
+                                                                      01201231----wrong
+                                                                      01201233-----right
+                                                            
                                 }
                                 else
                                 {
