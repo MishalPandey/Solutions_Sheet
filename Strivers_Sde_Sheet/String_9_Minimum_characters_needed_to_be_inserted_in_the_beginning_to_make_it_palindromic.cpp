@@ -1,6 +1,8 @@
+// code when Revise String ------USED KMP Algorithm concept longest prefix sum
+
+
 //Solution 1---T.C{O(n^2)}, S.C{O(1)}
 
-// code when Revise String
 
 int palin_max(string s)
 {
