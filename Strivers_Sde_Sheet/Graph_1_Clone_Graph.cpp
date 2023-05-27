@@ -1,4 +1,6 @@
 //Solution 1 --> Concept of Dfs travesal with S.C{O(V+E)}, T.C{O(V)}
+
+
 /*
 // Definition for a Node.
 class Node {
@@ -25,21 +27,19 @@ public:
     Node* dfs(Node* curr, unordered_map<Node*, Node*>& mp)
     {
 
-            vector<Node* > neighbor;
+            if(mp.find(curr) != mp.end())
+            {
+                return mp[curr];
+            }
+            
             Node* clone = new Node(curr->val);
+            vector<Node* > neighbor;
+            //visited marking
             mp[curr] = clone;
 
                     for(auto it: curr->neighbors)
-                    {
-                            if(mp.find(it) != mp.end())
-                            {
-                                neighbor.push_back(mp[it]);
-                            }
-                            else
-                            {
-                                neighbor.push_back(dfs(it, mp));
-                            }
-
+                    {   
+                        neighbor.push_back(dfs(it, mp));
                     }
             
             clone->neighbors = neighbor;
