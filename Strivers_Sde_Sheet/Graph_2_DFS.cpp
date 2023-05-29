@@ -1,5 +1,5 @@
 //Solution 1, T.C{O(V+E)}, S.C{O(V)}
-void dfs(int V, vector<int> adj[],  vector<int> & ans, int x, vector<bool>&vis)
+void dfs(int V, vector<int> &adj[],  vector<int> & ans, int x, vector<bool>&vis)
     {
         
         ans.push_back(x);
