@@ -7,7 +7,7 @@ void dfs(int V, vector<int> adj[],  vector<int> & ans, int x, vector<bool>&vis)
         for(auto it: adj[x])
         {
             if(vis[it]) continue;
-            dfs(V, adj[], ans, it, vis);
+            dfs(V, adj, ans, it, vis);
             
         }
         
@@ -21,7 +21,7 @@ void dfs(int V, vector<int> adj[],  vector<int> & ans, int x, vector<bool>&vis)
         
         if(V>0)
         {
-            dfs(V, adj[], ans, 0, vis)
+            dfs(V, adj, ans, 0, vis);
         
         }
         
