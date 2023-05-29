@@ -1,32 +1,43 @@
+//Solution 1, T.C{O(V+E)}, S.C{O(V)}
 //Using DFS
-void dfs(int V, vector<int> adj[],  vector<int> & ans, int x, vector<bool>&vis)
+class Solution {
+  public:
+    void dfs(int V, vector<int> adj[],  int &is_cycle, vector<bool>&vis, int vertex, int parent)
     {
         
-        ans.push_back(x);
-        vis[x]= true;
-        for(auto it: adj[x])
+        vis[vertex]= true;
+        for(auto it: adj[vertex])
         {
-            if(vis[it]) continue;
-            dfs(V, adj, ans, it, vis);
+            if(vis[it] && it == parent) continue;
+            if(vis[it])
+            {
+                is_cycle=1;
+                continue;
+            }
+            dfs(V, adj, is_cycle, vis, it, vertex);
             
         }
         
         
     }
-    // Function to return a list containing the DFS traversal of the graph.
-    vector<int> dfsOfGraph(int V, vector<int> adj[]) {
-        // Code here
-        vector<int>ans;
+    // Function to detect cycle in an undirected graph.
+    bool isCycle(int V, vector<int> adj[]) {
+        
         vector<bool> vis(V, 0);
+        bool ans = false;
         
-        if(V>0)
+        for(int i=0; i< V; i++)
         {
-            dfs(V, adj, ans, 0, vis);
-        
+            
+            if(vis[i]== false)
+            {
+                int is_cycle = 0;
+                dfs(V, adj, is_cycle, vis, i, -1);
+                ans = ans | is_cycle;
+            }
         }
         
         
         return ans;
-        
-        
     }
+};
