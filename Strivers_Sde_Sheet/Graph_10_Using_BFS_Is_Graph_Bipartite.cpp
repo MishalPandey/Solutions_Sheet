@@ -1,4 +1,5 @@
-//Solution 1
+//Solution 1, T.C{O(V+E)}, S.C{O(V)}
+
 
 class Solution {
 public:
