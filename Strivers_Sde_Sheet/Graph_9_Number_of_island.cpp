@@ -1,4 +1,4 @@
-//Solution 1
+//Solution 1 , T.C{O(n*m)}, S.C{O(n*m)} 
 
 
 class Solution {
